@@ -19,21 +19,22 @@ const Welcome = (props) => {
   {
     return (
       <>
-        <h5>Welcome component = Title: {props.username} & Age: {props.age} </h5>
+        <h5>Welcome component = Title: {props.username} & Age: {props.age} & Dept: {props.workingIn} </h5>
       </>
     )
   }
 }
 Welcome.defaultProps = {
   username:"user",
-  age:30
+  age:30,
+  workingIn : "IT"
 }
 
 ReactDOM.render(
   <React.StrictMode>
     <MyComponent compTitle = "Title:MyComponent"/>
     <App />
-    <Welcome username="Sam" age="34"/>
+    <Welcome username="Sam" age="34" workingIn="Finance"/>
     <Welcome username="Samyi" age="38"/>
     <Welcome />
   </React.StrictMode>,
