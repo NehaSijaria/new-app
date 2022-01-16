@@ -3,9 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
-const MyComponent = () => { {
+const MyComponent = (props) => { {
   return (
-    <p>Calling MyComponent</p>
+    <>
+      <h5>Calling component</h5>
+      <p>{props.compTitle}</p> 
+    </>
   )
 }
  
@@ -13,7 +16,7 @@ const MyComponent = () => { {
 
 ReactDOM.render(
   <React.StrictMode>
-    <MyComponent />
+    <MyComponent compTitle = "Title: MyComponent"/>
     <App />
   </React.StrictMode>,
   document.getElementById('root')
